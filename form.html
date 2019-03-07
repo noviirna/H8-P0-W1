@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Membuat file HTML ke 2 - Form Page - Novi Irnawati</title>
+</head>
+<body>
+<h1>Buat Account Baru!</h1>
+<h2>Sign Up Form</h2>
+<form action="welcome.html">
+<label for="fn">First name:</label>
+<input type="text" id="fn" name="fn" placeholder="insert first name" required>
+<br><br>
+<label for="ln">Last name:</label>
+<input type="text" id="ln" name="ln" placeholder="insert last name" required>
+<br><br>
+<label for="gender">Gender:</label><br>
+Male
+<input type="radio" id="male" name="gender" value="male">
+<br>Female
+<input type="radio" id="female" name="gender" value="female">
+<br>Other
+<input type="radio" id="other" name="gender" value="other">
+<br><br>
+<label for="nation">Nationality:</label>
+<select id="nation">
+	<option value="Malaysian">Malaysian</option>
+	<option value="Malaysian">Indonesian</option>
+</select>
+
+<p><br>Language Spoken:</p>
+<label for="Indonesian">Indonesian</label>
+  <input id="Indonesian" name="bahasa" type="checkbox" value="Indonesian">
+  <br>
+  <label for="English">English</label>
+  <input id="English" name="bahasa" type="checkbox" value="English">
+  <br>
+  <label for="Other">Other</label>
+  <input id="Other" name="bahasa" type="checkbox" value="Other">
+  <br><br>
+
+  <label for="bio">Bio:</label>
+  <br><textarea id="bio" name="bio" rows="10" cols="50" required></textarea>
+<br><br>
+<input type="submit" value="submit">
+</form>
+</body>
+</html>
