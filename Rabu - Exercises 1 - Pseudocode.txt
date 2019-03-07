@@ -1,0 +1,73 @@
+﻿1.
+deklarasi variabel resultan_gaya;
+deklarasi variabel massa_benda;
+deklarasi variabel percepatan_benda;
+
+massa_benda = 600;
+percepatan_benda = 2;
+
+resultan_gaya = massa_benda x percepatan_benda
+
+cetak resultan_gaya
+
+2.
+deklarasi variabel tahun;
+delarasi variabel digit_tahun;
+
+cek jika (digit_tahun modulo 4 = 0)
+{benar :
+	cek jika (digit_tahun modulo 100 = 0)
+	{benar :
+		cek jika (digit_tahun modulo 400 = 0)
+		{
+		benar :
+		tahun = “kabisat”
+		salah :
+		tahun = “bukan kabisat”
+		}
+	 salah :
+		tahun = “kabisat”
+	}
+ salah :
+	tahun = “bukan kabisat”
+}
+
+3.
+deklarasi variabel jumlah_pakaian;
+deklarasi variabel hitung;
+
+fungsi cuci_pakaian()
+{ cuci pakaian }
+
+jumlah_pakaian = 20;
+
+//  hitung jumlah pakaian //
+for (i=1; i<=jumlah_pakaian; i++)
+{
+	jika (i=jumlah_pakaian)
+		panggil fungsi cuci_pakaian(); // panggil fungsi mesin_cuci untuk cuci pakaian //
+}
+
+4.
+deklarasi variabel jumlah_murid;
+deklarasi variabel keadaan_kuku;
+deklarasi array murid[];
+
+jumlah_murid = 40;
+
+fungsi puji_siswa(){
+memuji siswa
+}
+
+fungsi hukum_siswa(){
+menghukum siswa
+}
+
+for (i=1; i<=40; i++)
+{
+	cek jika (murid[i] keadaan kuku = “baik”)
+	benar :
+	panggil fungsi puji_siswa();
+	salah ;
+	panggil fungsi hukum_siswa();
+}
