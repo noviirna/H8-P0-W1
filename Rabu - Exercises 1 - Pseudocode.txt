@@ -1,73 +1,43 @@
-﻿1.
-deklarasi variabel resultan_gaya;
-deklarasi variabel massa_benda;
-deklarasi variabel percepatan_benda;
 
-massa_benda = 600;
-percepatan_benda = 2;
+1.
+READ and SAVE "resultan_gaya"
+READ and SAVE "massa_benda"
+READ and SAVE "percepatan_benda"
 
-resultan_gaya = massa_benda x percepatan_benda
+COMPUTE "resultan_gaya" by MULTIPLYING "massa_benda" with "percepatan_benda"
 
-cetak resultan_gaya
+PRINT "resultan_gaya"
 
 2.
-deklarasi variabel tahun;
-delarasi variabel digit_tahun;
+READ and SAVE "tahun";
+READ and SAVE "digit_tahun";
 
-cek jika (digit_tahun modulo 4 = 0)
-{benar :
-	cek jika (digit_tahun modulo 100 = 0)
-	{benar :
-		cek jika (digit_tahun modulo 400 = 0)
-		{
-		benar :
-		tahun = “kabisat”
-		salah :
-		tahun = “bukan kabisat”
-		}
-	 salah :
-		tahun = “kabisat”
-	}
- salah :
-	tahun = “bukan kabisat”
-}
+
+CHECK IF "digit_tahun" mod 4 is EQUAL to 0 and "digit_tahun" mod 100 is EQUAL to 0 and "digit_tahun" mod 400 is EQUAL to 0
+	IF TRUE, THEN PRINT "kabisat"
+	IF FALSE, THEN PRINT "bukan tahun kabisat"
+
+
 
 3.
-deklarasi variabel jumlah_pakaian;
-deklarasi variabel hitung;
+READ and SAVE "jumlah_pakaian"
+READ and SAVE "hitung"
 
-fungsi cuci_pakaian()
-{ cuci pakaian }
+WHILE  i = 0 and i is LESS THAN "jumlah_pakaian"
+	DO put pakaian in the washing machine until pakaian in the washing machine is equal to "jumlah_pakaian"
+	CHECK IF pakaian in the washing machine is equal to "jumlah_pakaian"
+		IF TRUE, THEN DO start the washing machine to wash the clothes
+		IF FALSE, THEN keep putting the clothes into washing machine
 
-jumlah_pakaian = 20;
-
-//  hitung jumlah pakaian //
-for (i=1; i<=jumlah_pakaian; i++)
-{
-	jika (i=jumlah_pakaian)
-		panggil fungsi cuci_pakaian(); // panggil fungsi mesin_cuci untuk cuci pakaian //
-}
 
 4.
-deklarasi variabel jumlah_murid;
-deklarasi variabel keadaan_kuku;
-deklarasi array murid[];
+READ and SAVE "murid_di_cek";
+READ and SAVE "jumlah_murid";
+READ and SAVE "keadaan_kuku";
 
-jumlah_murid = 40;
-
-fungsi puji_siswa(){
-memuji siswa
-}
-
-fungsi hukum_siswa(){
-menghukum siswa
-}
-
-for (i=1; i<=40; i++)
-{
-	cek jika (murid[i] keadaan kuku = “baik”)
-	benar :
-	panggil fungsi puji_siswa();
-	salah ;
-	panggil fungsi hukum_siswa();
-}
+WHILE "murid_di_cek" is less than "jumlah_murid";
+	DO cek "keadaan_kuku" UNTIL "murid_di_cek" is EQUAL to "jumlah_murid"
+	CHECK IF "keadaan_kuku" is EQUAL to "tidak panjang"
+		IF TRUE, THEN DO puji siswa
+		IF FALSE, THEN DO hukum siswa
+	ADD 1 to "murid_di_cek" after checking "keadaan_kuku"
